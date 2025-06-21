@@ -12,6 +12,13 @@
     .product-card:hover { transform: scale(1.03); }
     header { background: linear-gradient(135deg, #256500, #61b15a); color: white; }
     footer { background-color: #3e2f1c; color: white; }
+#floating-cart {
+  z-index: 9999;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  padding: 12px 20px;
+}
   </style>
 </head>
 <body>
@@ -175,6 +182,11 @@
   <div hidden id="snipcart" data-api-key="NTZkYzYxZWEtYzdhYy00MmU0LWEyZTYtNjg1OTA0YWZmZGI3NjM4ODYxMDc3OTQ0MTM4ODQ1"
   data-config-add-product-behavior="none"
 ></div>
+
+<!-- Floating Cart Icon with Item Count -->
+<div id="floating-cart" class="btn btn-success position-fixed bottom-0 end-0 m-4 snipcart-checkout">
+  🛒 Cart (<span class="snipcart-items-count">0</span>)
+</div>
 
 </body>
 </html>
