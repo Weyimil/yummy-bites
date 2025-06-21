@@ -39,6 +39,11 @@
     <p class="lead">Delivered fresh to your doorstep in Canada 🇨🇦</p>
   </header>
 
+<!-- Search Bar -->
+<div class="container my-4">
+  <input type="text" id="productSearch" class="form-control form-control-lg" placeholder="Search for a product (e.g. Garri, Maggi, Oil)">
+</div>
+
   <!-- Products -->
   <section class="container my-5">
     <div class="row g-4">
@@ -209,6 +214,24 @@
         const toast = new bootstrap.Toast(toastEl);
         toast.show();
       });
+    });
+  });
+</script>
+
+<script>
+  document.getElementById("productSearch").addEventListener("input", function () {
+    const searchText = this.value.toLowerCase();
+    const productCards = document.querySelectorAll(".product-card");
+
+    productCards.forEach((card) => {
+      const productName = card.querySelector(".card-title").textContent.toLowerCase();
+      const productDesc = card.querySelector(".card-text").textContent.toLowerCase();
+
+      if (productName.includes(searchText) || productDesc.includes(searchText)) {
+        card.parentElement.style.display = "block";
+      } else {
+        card.parentElement.style.display = "none";
+      }
     });
   });
 </script>
