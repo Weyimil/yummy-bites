@@ -63,6 +63,21 @@
               data-item-name="Egusi (Melon Seeds)"
               data-item-description="1kg bag of shelled melon seeds"
             >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
               Add to Cart
             </button>
           </div>
@@ -84,6 +99,21 @@
               data-item-name="Palm Oil (Red)"
               data-item-description="1L of pure Nigerian red palm oil"
             >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
               Add to Cart
             </button>
           </div>
@@ -105,6 +135,21 @@
               data-item-name="Stockfish (Medium Cuts)"
               data-item-description="500g of dried stockfish chunks"
             >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
               Add to Cart
             </button>
           </div>
@@ -126,6 +171,21 @@
         data-item-name="Maggi Cubes (20 pcs)"
         data-item-description="Pack of 20 Maggi seasoning cubes"
       >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
         Add to Cart
       </button>
     </div>
@@ -147,6 +207,21 @@
         data-item-name="Garri (White)"
         data-item-description="1kg of finely sieved white Garri"
       >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
         Add to Cart
       </button>
     </div>
@@ -168,6 +243,21 @@
         data-item-name="Indomie Noodles (Carton)"
         data-item-description="Full carton of Indomie instant noodles"
       >
+<form class="snipcart-add-to-cart-form" onsubmit="event.preventDefault(); addToCart(this)">
+  <input type="number" class="form-control mb-2" name="quantity" value="1" min="1" />
+  <button
+    type="submit"
+    class="btn btn-success w-100"
+    data-item-id="egusi-1kg"
+    data-item-price="15.00"
+    data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+    data-item-name="Egusi (Melon Seeds)"
+    data-item-description="1kg bag of shelled melon seeds"
+  >
+    Add to Cart
+  </button>
+</form>
+
         Add to Cart
       </button>
     </div>
@@ -236,6 +326,14 @@
   });
 </script>
 
+<script>
+  function addToCart(form) {
+    const quantity = form.quantity.value;
+    const button = form.querySelector('button');
+    button.setAttribute('data-item-quantity', quantity);
+    button.click(); // triggers Snipcart to add item with custom quantity
+  }
+</script>
 
 </body>
 </html>
