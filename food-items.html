@@ -99,6 +99,69 @@
         </div>
       </div>
 
+	<!-- Maggi -->
+<div class="col-md-4">
+  <div class="card product-card p-3">
+    <img src="https://via.placeholder.com/300x200?text=Maggi+Cubes" class="card-img-top" alt="Maggi" />
+    <div class="card-body text-center">
+      <h5 class="card-title">Maggi Cubes (20 pcs)</h5>
+      <p class="card-text text-success">$12.00 CAD</p>
+      <button
+        class="btn btn-success snipcart-add-item"
+        data-item-id="maggi-cubes"
+        data-item-price="12.00"
+        data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+        data-item-name="Maggi Cubes (20 pcs)"
+        data-item-description="Pack of 20 Maggi seasoning cubes"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Garri -->
+<div class="col-md-4">
+  <div class="card product-card p-3">
+    <img src="https://via.placeholder.com/300x200?text=Garri" class="card-img-top" alt="Garri" />
+    <div class="card-body text-center">
+      <h5 class="card-title">Garri (White)</h5>
+      <p class="card-text text-success">$20.00 CAD / 1kg</p>
+      <button
+        class="btn btn-success snipcart-add-item"
+        data-item-id="garri-1kg"
+        data-item-price="20.00"
+        data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+        data-item-name="Garri (White)"
+        data-item-description="1kg of finely sieved white Garri"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Indomie -->
+<div class="col-md-4">
+  <div class="card product-card p-3">
+    <img src="https://via.placeholder.com/300x200?text=Indomie+Carton" class="card-img-top" alt="Indomie" />
+    <div class="card-body text-center">
+      <h5 class="card-title">Indomie Noodles (Carton)</h5>
+      <p class="card-text text-success">$28.00 CAD</p>
+      <button
+        class="btn btn-success snipcart-add-item"
+        data-item-id="indomie-carton"
+        data-item-price="28.00"
+        data-item-url="https://weyimil.github.io/yummy-bites/food-items.html"
+        data-item-name="Indomie Noodles (Carton)"
+        data-item-description="Full carton of Indomie instant noodles"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+
     </div>
   </section>
 
@@ -111,6 +174,12 @@
   <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
   <div hidden id="snipcart" data-api-key="NTZkYzYxZWEtYzdhYy00MmU0LWEyZTYtNjg1OTA0YWZmZGI3NjM4ODYxMDc3OTQ0MTM4ODQ1"></div>
 
+<script>
+  document.addEventListener('snipcart.ready', () => {
+    Snipcart.store.config.modalStyle = 'side'; // Optional visual change
+    Snipcart.api.configure('show_cart_on_add', false); // Prevent cart auto-open
+  });
+</script>
 
 </body>
 </html>
