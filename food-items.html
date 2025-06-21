@@ -13,12 +13,6 @@
     header { background: linear-gradient(135deg, #256500, #61b15a); color: white; }
     footer { background-color: #3e2f1c; color: white; }
   </style>
-<script>
-  document.addEventListener('snipcart.ready', () => {
-    Snipcart.store.config.modalStyle = 'side'; // Optional visual change
-    Snipcart.api.configure('show_cart_on_add', false); // Prevent cart auto-open
-  });
-</script>
 </head>
 <body>
 
@@ -179,6 +173,12 @@
   <!-- Snipcart Script -->
   <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
   <div hidden id="snipcart" data-api-key="NTZkYzYxZWEtYzdhYy00MmU0LWEyZTYtNjg1OTA0YWZmZGI3NjM4ODYxMDc3OTQ0MTM4ODQ1"></div>
+
+ <script>
+  document.addEventListener('snipcart.ready', function () {
+    Snipcart.api.configure('show_cart_on_add', false);
+  });
+</script>
 
 </body>
 </html>
