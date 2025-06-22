@@ -106,98 +106,37 @@
   </div>
 </section>
 
-<!-- Generic Order/Inquiry Form -->
+<!-- Inquiry Form -->
 <section class="container my-5">
-  <div class="card p-4 shadow">
-    <h2 class="text-center mb-4">Place an Order or Make an Inquiry</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="mb-3">
-        <label for="serviceType" class="form-label">I'm interested in:</label>
-        <select class="form-select" name="serviceType" required>
-          <option value="">Select one</option>
-          <option value="Event Catering">Event Catering</option>
-          <option value="Cakes & Bakes">Cakes & Bakes</option>
-        </select>
-      </div>
-
-      <div class="mb-3">
-        <label for="name" class="form-label">Your Name</label>
-        <input type="text" class="form-control" name="name" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number</label>
-        <input type="text" class="form-control" name="phone">
-      </div>
-
-      <div class="mb-3">
-        <label for="message" class="form-label">Message / Order Details</label>
-        <textarea class="form-control" name="message" rows="4" required></textarea>
-      </div>
-
-      <div class="text-center">
-        <button type="submit" class="btn btn-success px-5">Send Request</button>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- WhatsApp Contact Form -->
-<section class="container my-5">
-  <h2 class="text-center mb-4">Make an Inquiry</h2>
-  <form id="whatsappForm">
+  <h2 class="text-center mb-4">Send Your Orders/Inquiries</h2>
+  <form action="https://formspree.io/f/mgvylgjl" method="POST">
     <div class="mb-3">
-      <label for="serviceType" class="form-label">Select Service</label>
-      <select class="form-select" id="serviceType" required>
+      <label for="service" class="form-label">Service</label>
+      <select class="form-select" name="Service" id="service" required>
         <option value="">Choose...</option>
-        <option value="Event Catering">Event Catering</option>
         <option value="Cakes & Bakes">Cakes & Bakes</option>
+        <option value="Event Catering">Event Catering</option>
       </select>
     </div>
     <div class="mb-3">
-      <label for="userName" class="form-label">Your Name</label>
-      <input type="text" class="form-control" id="userName" required>
+      <label for="name" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="name" name="Name" required />
     </div>
     <div class="mb-3">
-      <label for="userEmail" class="form-label">Your Email</label>
-      <input type="email" class="form-control" id="userEmail" required>
+      <label for="email" class="form-label">Your Email</label>
+      <input type="email" class="form-control" id="email" name="Email" required />
     </div>
     <div class="mb-3">
-      <label for="userPhone" class="form-label">Your Phone</label>
-      <input type="text" class="form-control" id="userPhone" required>
+      <label for="phone" class="form-label">Your Phone</label>
+      <input type="text" class="form-control" id="phone" name="Phone" />
     </div>
     <div class="mb-3">
-      <label for="userMessage" class="form-label">Your Message</label>
-      <textarea class="form-control" id="userMessage" rows="4" required></textarea>
+      <label for="message" class="form-label">Your Message</label>
+      <textarea class="form-control" id="message" name="Message" rows="4" required></textarea>
     </div>
-    <button type="submit" class="btn btn-success w-100">Submit via WhatsApp</button>
+    <button type="submit" class="btn btn-success w-100">Send Inquiry</button>
   </form>
 </section>
-
-<!-- Script to handle WhatsApp redirection -->
-<script>
-  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const service = document.getElementById("serviceType").value;
-    const name = document.getElementById("userName").value;
-    const email = document.getElementById("userEmail").value;
-    const phone = document.getElementById("userPhone").value;
-    const message = document.getElementById("userMessage").value;
-
-    const text = `Hello Yummy Bites! 🍽️\n\nService: ${service}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`;
-    const encodedText = encodeURIComponent(text);
-    const whatsappUrl = `https://wa.me/447727306931?text=${encodedText}`;
-
-    window.open(whatsappUrl, '_blank');
-  });
-</script>
-
 
 
 <!-- Footer -->
