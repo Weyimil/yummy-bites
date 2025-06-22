@@ -155,6 +155,57 @@
   </div>
 </section>
 
+<!-- WhatsApp Contact Form -->
+<section class="container my-5">
+  <h2 class="text-center mb-4">Make an Inquiry</h2>
+  <form id="whatsappForm">
+    <div class="mb-3">
+      <label for="serviceType" class="form-label">Select Service</label>
+      <select class="form-select" id="serviceType" required>
+        <option value="">Choose...</option>
+        <option value="Event Catering">Event Catering</option>
+        <option value="Cakes & Bakes">Cakes & Bakes</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="userName" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="userName" required>
+    </div>
+    <div class="mb-3">
+      <label for="userEmail" class="form-label">Your Email</label>
+      <input type="email" class="form-control" id="userEmail" required>
+    </div>
+    <div class="mb-3">
+      <label for="userPhone" class="form-label">Your Phone</label>
+      <input type="text" class="form-control" id="userPhone" required>
+    </div>
+    <div class="mb-3">
+      <label for="userMessage" class="form-label">Your Message</label>
+      <textarea class="form-control" id="userMessage" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-success w-100">Submit via WhatsApp</button>
+  </form>
+</section>
+
+<!-- Script to handle WhatsApp redirection -->
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const service = document.getElementById("serviceType").value;
+    const name = document.getElementById("userName").value;
+    const email = document.getElementById("userEmail").value;
+    const phone = document.getElementById("userPhone").value;
+    const message = document.getElementById("userMessage").value;
+
+    const text = `Hello Yummy Bites! 🍽️\n\nService: ${service}\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/447727306931?text=${encodedText}`;
+
+    window.open(whatsappUrl, '_blank');
+  });
+</script>
+
 
   <!-- Footer -->
   <footer class="text-center py-3">
